@@ -4,10 +4,11 @@
 # By Chahat Deep Singh
 # Date: 09-Oct-2016
 
-# Installing Youtube
-sudo apt-get install mpv
-sudo add-apt-repository ppa:nilarimogard/webupd8
+# Installing Youtube Player ATRACI
+sudo add-apt-repository ppa:webupd8team/atraci
 sudo apt-get update
-sudo apt-get install youtube-viewer
+sudo apt-get install atraci
 
-#Installing 
+#Installing spotify
+sudo apt-get install spotify
+

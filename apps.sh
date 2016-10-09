@@ -9,6 +9,8 @@ sudo add-apt-repository ppa:webupd8team/atraci
 sudo apt-get update
 sudo apt-get install atraci
 
-#Installing spotify
+# Installing spotify
 sudo apt-get install spotify
 
+# Installing npm
+sudo apt-get install npm

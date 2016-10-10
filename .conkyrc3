@@ -1,0 +1,95 @@
+#!/usr/bin/conky -d -c
+background yes
+alignment top_right
+border_width 5
+color0 555555			#
+color1 FCAF3E			# zolty
+color2 64574e			# braz
+color3 a82553			# rozowy f71f84
+color4 5e1014			# bordowy
+color5 64574e			# braz
+color6 a7a7a7			# szary
+color7 8888CC			#  (COOL)
+color8 9d9c61			# zolto-szary
+color9 525276			# niebiesko-szary
+cpu_avg_samples 2
+default_color CCCCCC		# szary a7a7a7
+default_outline_color 000000 	# Black
+default_shade_color 000000	# Black
+double_buffet yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 10
+gap_y 20
+max_user_text 10000
+maximum_width 180
+minimum_size 850
+net_avg_samples 2
+no_buffers yes
+override_utf8_locale no
+own_window yes
+own_window_type desktop
+own_window_class Conky
+own_window_colour 000000	# Black
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_type override 	## normal
+pad_percents 2			# to co nizej, miejsc po przecinku
+short_units yes			# krotka wersja podawania wielkosci dyskow np. 612.21M/3.80G
+stippled_borders 3
+text_buffer_size 8000
+total_run_times 0
+update_interval 5
+uppercase no
+use_spacer right
+use_xft yes
+xftalpha 0.75
+xftfont MrsEavesSmartLig:bold:size=11
+
+
+# ${diskiograph /dev/sda 15,180 a7a7a7 a7a7a7} # wskaznik pracy dysku
+# ${image /home/didisoft/.conky/didisoft.jpg -p 0,80 -s 26x28} # obrazki w conky
+
+TEXT
+#${color}${font MrsEavesSmartLig:bold:size=12}USD:${execpi 10 units -t USD INR}INR${font}${color}
+#${color Yellow}${font mathematica6:size=18}Intern$hr${font}${color}
+${color 00C0FF}${font MrsEavesSmartLig:bold:size=12}${execpi 300 cat $HOME/work/today | head -10 }${font}$color
+#$hr 
+${color White}${goto 10}${font DejaVu Sans Mono:size=44}${time %l}${font DejaVu Sans Mono:size=20}${voffset -25}:${time %M}${font size:10}${time %p}${font DejaVu Sans Mono:size=8}${voffset -12}
+${goto 85}${voffset 10}${font Inconsolata:bold:size=8}${tztime Asia/Kolkata %A}
+#Use tzselect in terminal to view different time zones
+${goto 85}${voffset 1}${font Inconsolata:bold:size=9}${tztime Asia/Kolkata %d %B %Y}${color}
+#${color}${goto 10}${font DejaVu Sans Mono:size=44}${time %H}${font DejaVu Sans Mono:size=20}${voffset -25}'${time %M}${font DejaVu Sans Mono:size=8}${voffset -12}${time %S}
+#${goto 85}${voffset 10}${font :size=8}${time %A}
+#${goto 85}${voffset 1}${font :size=8}${time %d %B %Y}${color}
+#
+${color Light Blue}${font Inconsolata:bold:size=10}${execpi 3600 DJS=`date +%_d`; cal -m | sed '1d' | sed '/./!d' | sed 's/$/                     /' | fold -w 21 | sed -n '/^.\{21\}/p' | sed 's/^/${alignc} /' | sed /" $DJS "/s/" $DJS "/" "'${color Yellow}'"$DJS"'${color}${font Inconsolata:bold:size=10}'" "/}${font}
+#RsbillsDng
+#${color White}${font mathematica6:bold:size=14}${font}$hr${color}
+${color White}${font MrsEavesSmartLig:bold:size=12}Battery ${alignr}${Battery_percent BAT0}% / ${acpitemp}C${color}
+#Top 3 Running Tasks
+
+${voffset -7}${font Inconsolata:bold:size=10}NAME ${goto 90}PID${goto 120} CPU% ${alignr}MEM%${font}
+${font MrsEavesSmartLig:bold:size=8}${goto 9}${top name 1}${goto 85}${top pid 1}${goto 120}${top cpu 1}${goto 156}${top mem 1}${font}
+${font MrsEavesSmartLig:bold:size=8}${goto 9}${top name 2}${goto 85}${top pid 2}${goto 120}${top cpu 2}${goto 156}${top mem 2}${font}
+${font MrsEavesSmartLig:bold:size=8}${goto 9}${top name 3}${goto 85}${top pid 3}${goto 120}${top cpu 3}${goto 156}${top mem 3}${font}
+${color White}${font mathematica6:size=14}Weather Report$hr${font}${color}
+${color}MD: ${execpi 60 bash ~/.config/weather.sh 20740}${color}
+${color}DL: ${execpi 60 bash ~/.config/weather.sh "ASIA|IND|DELHI"}${color}
+######################
+
+#${color Yellow}${font mathematica6:size=14}To Do$hr${font}${color}
+#${color AAAA00}
+${font MrsEavesSmartLig:bold:size=12}${execpi 300 cat $HOME/todo.txt | head -15 }#${font}
+
+
+##
+ ##..: Separation line
+ ##
+ #${color3}${alignc}${cpubar cpu6 0, 200}
+ ##
+ ##..: Backup status :..
+ ##
+ #${color3}${alignc}${execpi 700 $HOME/todo.txt}          

@@ -5,9 +5,9 @@
 # Date: 09-Oct-2016
 
 # Installing Youtube Player ATRACI [Discontinued; Search for Kaku for Youtube Linux API]
-#sudo add-apt-repository ppa:webupd8team/atraci
-#sudo apt-get update
-#sudo apt-get install atraci
+# sudo add-apt-repository ppa:webupd8team/atraci
+# sudo apt-get update
+# sudo apt-get install atraci
 
 # Installing spotify
 sudo apt-get install spotify

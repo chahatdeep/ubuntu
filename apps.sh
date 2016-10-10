@@ -14,3 +14,8 @@ sudo apt-get install spotify
 
 # Installing npm
 sudo apt-get install npm
+
+# Access Youtube controls (Running in Chrome/Firefox) from command line using xdotool
+sudo apt-get install xdotool
+
+

@@ -1,0 +1,18 @@
+#!/bin/bash
+#Stop Watch Program
+
+$s;
+$m;
+$h;
+s=0;
+while true
+do
+	sleep 1;
+	s=$((s+1));
+	clear;
+#	if [$s==10]
+		echo "Time is $s seconds"
+#	else
+#		$m=$s/10 && echo "$m $s"
+#	fi	
+done

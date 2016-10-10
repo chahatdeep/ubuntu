@@ -1,0 +1,2 @@
+echo Enter the password to send your Arch to sleep
+sudo pm-suspend-hybrid && exit

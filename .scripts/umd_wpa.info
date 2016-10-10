@@ -1,0 +1,11 @@
+ctrl interface=/var/run/wpa_supplicant
+ap_scan=1
+network {
+    ssid="umd-secure"
+    proto=RSN
+    pairwise=CCMP
+    eap=PEAP
+    identity="chahat"
+    password="Jasmeet*07"
+    key_mgmt=WPA-EAP
+}

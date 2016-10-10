@@ -17,5 +17,10 @@ sudo apt-get install npm
 
 # Access Youtube controls (Running in Chrome/Firefox) from command line using xdotool
 sudo apt-get install xdotool
+# Source Links: http://askubuntu.com/questions/538168/can-i-pause-youtube-in-chrome-from-the-command-line
+# &
+# http://webapps.stackexchange.com/questions/17662/is-there-a-youtube-keyboard-shortcut-for-the-previous-and-next-video-in-a-playli
+
+
 
 

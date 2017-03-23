@@ -47,11 +47,11 @@ exec docky
 #############################################################################
 
 ######## >>--FONTS--<< ###################
-#font pango:DejaVu Sans Mono Bold 8	##
-#font pango:FontAwesome Bold 9		##
-font pango:Inconsolata Bold 9		
-#font pango:Monospace Bold 8		##
-#font pango:FontAwesome 8		##
+#font pango:DejaVu Sans Mono Bold 8     ##
+#font pango:FontAwesome Bold 9          ##
+font pango:Inconsolata Bold 9
+#font pango:Monospace Bold 8            ##
+#font pango:FontAwesome 8               ##
 ##########################################
 	
 ####################################
